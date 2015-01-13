@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript" src="data.json"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+<p id="test"></p>
+<body onLoad="load()">
+<ul id="myList">
+<li id="domains"></li>
+</ul>
+
+</body>
+
+<script>
+
+function load(){
+	
+var myData = JSON.parse(data);
+//alert(myData[40]);
+
+for(i = 0; i < 732; i++){
+var x = document.createElement("LI");
+    var t = document.createTextNode(myData[i]);
+    x.appendChild(t);
+    document.getElementById("myList").appendChild(x);
+}
+
+alert(myData.length);
+
+
+}
+</script>
+
+</html>
